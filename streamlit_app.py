@@ -8,7 +8,7 @@ user_input = st.sidebar.text_area(
     "Watermark text: ", "Watermark text\ngoes here")
 font_size = st.sidebar.slider("Font size: ", 1, 100, 32)
 font_style = st.sidebar.selectbox(
-    'Choose font: ', ('arial.ttf', 'arial.ttf'))
+    'Choose font: ', ('./font/arial-bold.ttf', './font/arial-bold.ttf'))
 color_hex = st.sidebar.color_picker("Background color hex: ", "#eee")
 alph = st.sidebar.slider("Opacity: ", 0, 255, 200)
 
@@ -16,7 +16,7 @@ alph = st.sidebar.slider("Opacity: ", 0, 255, 200)
 font = ImageFont.truetype(font_style, size=font_size)
 
 # sample image path
-dir = './wm-maker/Lenna_(test_image).png'
+dir = './Lenna_(test_image).png'
 
 # check uploaded file
 if upload_file:
